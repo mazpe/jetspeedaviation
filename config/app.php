@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'url' => 'http://localhost',
+    'url' => 'http://jetspeedaviation.app',
 
     /*
     |--------------------------------------------------------------------------
@@ -81,7 +81,7 @@ return [
     |
     */
 
-    'key' => 'GV8orvLcKOivkIo2FEsfgikoJduntwtX',
+    'key' => 'nZj4eoV0Ed2aLlu4WMmnUxBzp4WPpaZh',
 
     'cipher' => 'AES-256-CBC',
 
