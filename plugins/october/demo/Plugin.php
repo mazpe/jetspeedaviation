@@ -12,7 +12,7 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'October Demo',
+            'name'        => 'October Demo1',
             'description' => 'Provides features used by the provided demonstration theme.',
             'author'      => 'Alexey Bobkov, Samuel Georges',
             'icon'        => 'icon-leaf'
