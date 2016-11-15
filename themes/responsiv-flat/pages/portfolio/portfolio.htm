@@ -1,0 +1,34 @@
+title = "Exclusive Listings"
+url = "/portfolio"
+layout = "default"
+is_hidden = 0
+
+[listing]
+category = "Jets"
+items = 204
+==
+{% put scripts %}
+    <script src="{{ [
+        'assets/vendor/isotope/jquery.isotope.js',
+        'assets/javascript/pages/portfolio.js',
+    ]|theme }}"></script>
+{% endput %}
+
+<section id="layout-title">
+    <div class="container">
+        <h3 class="pull-left">Exclusive Listings</h3>
+
+        <div class="btn-toolbar pull-right">
+            <div class="btn-group" id="filters">
+                <a class="btn btn-primary active" href="#filter" class="selected" data-filter="*"><span class="fui-list"></span> All</a>
+                <a class="btn btn-primary" href="#filter" data-filter=".jets"><span class="fui-eye"></span> Jets</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+
+ {% component 'listing' %}
+
+</div>

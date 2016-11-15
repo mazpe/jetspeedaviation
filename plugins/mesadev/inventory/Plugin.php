@@ -18,7 +18,7 @@ class Plugin extends PluginBase
         return [
             'name'        => 'Inventory',
             'description' => 'MesaDev Inventory Management System',
-            'author'      => 'Mesadev',
+            'author'      => 'Lester Ariel Mesa',
             'icon'        => 'icon-leaf'
         ];
     }
