@@ -1,6 +1,7 @@
 <?php namespace Mesadev\Inventory\Components;
 
 use Cms\Classes\ComponentBase;
+use Mesadev\Inventory\Models\Item;
 
 class Display extends ComponentBase
 {
@@ -15,7 +16,20 @@ class Display extends ComponentBase
 
     public function defineProperties()
     {
-        return [];
+        return [
+            'id' => [
+                'title'             => 'Item ID',
+                'description'       => 'The ID for the inventory item',
+                'type'              => 'string',
+                'validationPattern' => '^[0-9]+$',
+                'validationMessage' => 'The Item ID must of a numeric value'
+            ]
+        ];
     }
 
+    public function onRun()
+    {
+        $itemId = $this->param('item_id');
+        $this->page['itemInfo'] = Item::find($itemId);
+    }
 }

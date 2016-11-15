@@ -2,7 +2,6 @@
 
 use Cache;
 use Cms\Classes\ComponentBase;
-use Mesadev\Inventory\Models\Item;
 use Request;
 use System\Classes\ApplicationException;
 
