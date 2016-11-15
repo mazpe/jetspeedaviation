@@ -1,6 +1,9 @@
 <?php namespace Mesadev\Inventory\Components;
 
+use Cache;
 use Cms\Classes\ComponentBase;
+use Request;
+use System\Classes\ApplicationException;
 
 class Listing extends ComponentBase
 {
@@ -51,12 +54,15 @@ class Listing extends ComponentBase
     {
         $categories = $this->loadListingData();
         $categoryCode = Request::input('category');
+        $categoryCode = "jets";
         return isset($categories[$categoryCode]) ? $categories[$categoryCode]['items'] : [];
     }
 
     public function onRun()
     {
         $this->addCss('/plugins/mesadev/inventory/assets/css/listings.css');
+
+        // TODO: return all items including categories
         $this->page['listingsInfo'] = $this->getItemsOptions();
     }
 
