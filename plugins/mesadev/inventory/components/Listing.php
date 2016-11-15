@@ -15,7 +15,20 @@ class Listing extends ComponentBase
 
     public function defineProperties()
     {
-        return [];
+        return [
+            'category' => [
+                'title'             => 'Category',
+                'type'              => 'dropdown',
+                'default'           => 'Jets'
+            ],
+            'items' => [
+                'title'             => 'Items',
+                'type'              => 'dropdown',
+                'default'           => '204',
+                'depends'           => ['category'],
+                'placeholder'       => 'Select an item'
+            ]
+        ];
     }
 
 }
