@@ -7,7 +7,7 @@ class CreateItemsTable extends Migration
 {
     public function up()
     {
-        if (!Schema::hasTable('users')) {
+        if (!Schema::hasTable('mesadev_inventory_items')) {
             Schema::create('mesadev_inventory_items', function ($table) {
                 $table->engine = 'InnoDB';
                 $table->increments('id');
@@ -37,7 +37,7 @@ class CreateItemsTable extends Migration
 
     public function down()
     {
-        if (Schema::hasTable('users')) {
+        if (Schema::hasTable('mesadev_inventory_items')) {
             Schema::drop('mesadev_inventory_items');
         }
     }
