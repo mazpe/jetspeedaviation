@@ -1,3 +1,21 @@
-<p>This is the default markup for component Listing</p>
-
-<small>You can delete this file if you want</small>
+<div class="listings-widget">
+    {% if listingsInfo.message %}
+        <p class="error">{{ listingsInfo.message }}</p>
+    {% else %}
+    <div class="container">
+        {% for post in listingsInfo %}
+            <div class="row">
+                <div class="col-lg-4">
+                    Pictures
+                </div>
+                <div class="col-lg-8">
+                    {{ post.year }}<br />
+                    {{ post.make }}<br />
+                    {{ post.model }}<br />
+                    <p class="description">SN: {{ post.serial }}</p><br />
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+</div>
