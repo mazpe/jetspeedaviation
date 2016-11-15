@@ -1,6 +1,5 @@
 <?php namespace Mesadev\Inventory;
 
-use Backend;
 use System\Classes\PluginBase;
 
 /**
@@ -18,7 +17,7 @@ class Plugin extends PluginBase
     {
         return [
             'name'        => 'Inventory',
-            'description' => 'No description provided yet...',
+            'description' => 'MesaDev Inventory Management System',
             'author'      => 'Mesadev',
             'icon'        => 'icon-leaf'
         ];
