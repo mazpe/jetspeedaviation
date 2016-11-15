@@ -1,5 +1,123 @@
-<p>This is the default markup for component Display</p>
+{% put styles %}
+<link href="{{ [
+        'assets/vendor/slick/slick.css',
+    ]|theme }}" rel="stylesheet">
+{% endput %}
+{% put scripts %}
+<script src="{{ [
+        'assets/vendor/slick/slick.js',
+    ]|theme }}"></script>
+<script>
+    $(document).ready(function() {
+        $('#projectImages').slick({
+            dots: true,
+            infinite: true,
+            speed: 500,
+            fade: true,
+            cssEase: 'linear',
+            slidesToShow: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            pauseOnHover: true
+        });
+    })
+</script>
+{% endput %}
 
-<small>You can delete this file if you want</small>
+<section id="layout-title">
+    <div class="container">
+        <h3>{{ itemInfo.year }} - {{ itemInfo.make }} - {{ itemInfo.model }} - SN: {{ itemInfo.serial }}</h3>
+    </div>
+</section>
 
-Year: {{ itemInfo.year }}
+<div class="container">
+
+    <div id="projectImages" class="project-images">
+        <div>
+            <div class="image"><img src="{{ 'assets/images/portfolio/project1.jpg'|theme }}" class="img-responsive" alt="" /></div>
+            <div class="caption">Classic vintage</div>
+        </div>
+        <div>
+            <div class="image"><img src="{{ 'assets/images/portfolio/project2.jpg'|theme }}" class="img-responsive" alt="" /></div>
+            <div class="caption">Nature's prime</div>
+        </div>
+        <div>
+            <div class="image"><img src="{{ 'assets/images/portfolio/project3.jpg'|theme }}" class="img-responsive" alt="" /></div>
+            <div class="caption">Surfin' bird</div>
+        </div>
+        <div>
+            <div class="image"><img src="{{ 'assets/images/portfolio/project4.jpg'|theme }}" class="img-responsive" alt="" /></div>
+            <div class="caption">Healthy, wealthy &amp; wise</div>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-8">
+
+            <!-- Project description -->
+            <div class="project-description">
+                <h3>Description</h3>
+                <p>{{ itemInfo.description }}</p>
+
+                <h3>Engine Specifications</h3>
+                <p>{{ itemInfo.engine }}</p>
+
+                <h3>Avionics Specifications</h3>
+                <p>{{ itemInfo.avionics }}</p>
+
+                <h3>Additional Features & Options</h3>
+                <p>{{ itemInfo.features }}</p>
+
+                <h3>Interior</h3>
+                <p>{{ itemInfo.interior }}</p>
+
+                <h3>Exterior</h3>
+                <p>{{ itemInfo.exterior }}</p>
+
+                <h3>Maintenance</h3>
+                <p>{{ itemInfo.maintenance }}</p>
+
+                <h3>Inspection</h3>
+                <p>{{ itemInfo.inspection }}</p>
+
+                <h3>Comments</h3>
+                <p>{{ itemInfo.interior }}</p>
+            </div>
+
+        </div>
+        <div class="col-md-4">
+
+            <!-- Project information -->
+            <ul class="project-info">
+                <li><strong>Price</strong> {{ itemInfo.price }}</li>
+                <li><strong>Published</strong> {{ itemInfo.created_at }}</li>
+            </ul>
+
+        </div>
+    </div>
+
+    <!-- Quote -->
+    <h4 class="headline"><span>What the client said</span></h4>
+    <blockquote>
+        <p>As busy as a dob how flat out like a butcher. She'll be right boozer how it'll be ankle biter. Stands out like a feral heaps stands out like a big smoke. Mad as a franger flamin lets throw a compo. You little ripper bitzer how she'll be right slacker. Shazza got us some swagger no dramas get a dog up ya boozer. Shazza got us some coldie with gutful of dole bludger.</p>
+        <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+    </blockquote>
+
+    <!-- Pagination -->
+    <ul class="pager pull-right">
+        <li class="previous">
+            <a href="#">
+                <span class="fui-arrow-left"></span>
+                Previous
+            </a>
+        </li>
+        <li class="next">
+            <a href="#">
+                Next
+                <span class="fui-arrow-right"></span>
+            </a>
+        </li>
+    </ul>
+
+</div>

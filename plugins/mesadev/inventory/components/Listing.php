@@ -4,6 +4,8 @@ use Cache;
 use Cms\Classes\ComponentBase;
 use Request;
 use System\Classes\ApplicationException;
+use Mesadev\Inventory\Models\Item;
+
 
 
 class Listing extends ComponentBase

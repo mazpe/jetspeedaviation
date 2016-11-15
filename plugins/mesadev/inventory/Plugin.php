@@ -54,6 +54,7 @@ class Plugin extends PluginBase
 
         return [
             'Mesadev\Inventory\Components\Listing' => 'listing',
+            'Mesadev\Inventory\Components\Display' => 'display',
         ];
     }
 
