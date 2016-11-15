@@ -1,0 +1,26 @@
+{
+  "name": "jetspeedaviation",
+  "version": "1.0.0",
+  "description": "Jet Speed Aviation Inventory Management System",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {
+    "bower": "^1.8.0",
+    "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mazpe/jetspeedaviation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mazpe/jetspeedaviation/issues"
+  },
+  "homepage": "https://github.com/mazpe/jetspeedaviation#readme"
+}
