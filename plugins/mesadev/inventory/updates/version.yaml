@@ -1,1 +1,4 @@
 1.0.1: First version of Inventory
+1.0.2:
+      - Updated with a migration
+      - create_items_table.php
