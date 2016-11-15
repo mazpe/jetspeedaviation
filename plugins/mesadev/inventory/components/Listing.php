@@ -31,4 +31,33 @@ class Listing extends ComponentBase
         ];
     }
 
+    protected function loadListingData()
+    {
+        return json_decode(file_get_contents(__DIR__.'/../data/items.json'), true);
+    }
+
+    public function getCategoryOptions()
+    {
+        $categories = $this->loadListingData();
+        $result = [];
+
+        foreach ($categories as $category => $data)
+            $result[$category] = $data['name'];
+
+        return $result;
+    }
+
+    public function getItemsOptions()
+    {
+        $categories = $this->loadListingData();
+        $categoryCode = Request::input('category');
+        return isset($categories[$categoryCode]) ? $categories[$categoryCode]['items'] : [];
+    }
+
+    public function onRun()
+    {
+        $this->addCss('/plugins/mesadev/inventory/assets/css/listings.css');
+        $this->page['listingsInfo'] = $this->getItemsOptions();
+    }
+
 }
