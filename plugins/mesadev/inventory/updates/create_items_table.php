@@ -11,6 +11,7 @@ class CreateItemsTable extends Migration
             Schema::create('mesadev_inventory_items', function ($table) {
                 $table->engine = 'InnoDB';
                 $table->increments('id');
+                $table->string('category')->index();
                 $table->string('serial')->index();
                 $table->string('year')->index();
                 $table->string('make')->index();

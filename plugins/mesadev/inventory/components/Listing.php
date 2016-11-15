@@ -2,8 +2,10 @@
 
 use Cache;
 use Cms\Classes\ComponentBase;
+use Mesadev\Inventory\Models\Item;
 use Request;
 use System\Classes\ApplicationException;
+
 
 class Listing extends ComponentBase
 {
@@ -63,7 +65,7 @@ class Listing extends ComponentBase
         $this->addCss('/plugins/mesadev/inventory/assets/css/listings.css');
 
         // TODO: return all items including categories
-        $this->page['listingsInfo'] = $this->getItemsOptions();
+        $this->page['listingsInfo'] = Item::where('category', 'jets')->get();
     }
 
 }
